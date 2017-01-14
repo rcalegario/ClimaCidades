@@ -53,10 +53,13 @@ class ViewController: UIViewController {
         
         let url = URL(string: urlWeather)
         let data = NSData(contentsOf: url!)
+        //print(data?.length)
         do{
             let json = try JSONSerialization.jsonObject(with: data! as Data, options: []) as! [String:Any]
             
             let array = json["list"] as! NSArray
+            
+            listOfCity = [] as NSArray
             
             for temp in array {
                 let city = temp as! Dictionary<String, AnyObject>
@@ -71,7 +74,15 @@ class ViewController: UIViewController {
             print("erro")
         }
         
-        print(listOfCity)
+        let userDefaults:UserDefaults = UserDefaults.standard
+        //var itemList:NSMutableArray? = userDefaults.object(forKey: "itemList") as? NSMutableArray
+        
+        userDefaults.removeObject(forKey: "itemList")
+        userDefaults.set(listOfCity, forKey: "itemList")
+        userDefaults.synchronize()
+        
+        //print(listOfCity)
+        print("ok")
         
     }
 }

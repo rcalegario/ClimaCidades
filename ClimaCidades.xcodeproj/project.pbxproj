@@ -15,6 +15,7 @@
 		694AD00E1E29A7A100EBFA13 /* ClimaCidadesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD00D1E29A7A100EBFA13 /* ClimaCidadesTests.swift */; };
 		694AD0191E29A7A100EBFA13 /* ClimaCidadesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD0181E29A7A100EBFA13 /* ClimaCidadesUITests.swift */; };
 		694AD0271E29D99100EBFA13 /* ListOfCityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD0261E29D99100EBFA13 /* ListOfCityTableViewController.swift */; };
+		695696921E2A618E0009607B /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695696911E2A618E0009607B /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		694AD0181E29A7A100EBFA13 /* ClimaCidadesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaCidadesUITests.swift; sourceTree = "<group>"; };
 		694AD01A1E29A7A100EBFA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694AD0261E29D99100EBFA13 /* ListOfCityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCityTableViewController.swift; sourceTree = "<group>"; };
+		695696911E2A618E0009607B /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				694AD0011E29A7A100EBFA13 /* LaunchScreen.storyboard */,
 				694AD0041E29A7A100EBFA13 /* Info.plist */,
 				694AD0261E29D99100EBFA13 /* ListOfCityTableViewController.swift */,
+				695696911E2A618E0009607B /* DescriptionViewController.swift */,
 			);
 			path = ClimaCidades;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				694ACFFB1E29A7A100EBFA13 /* ViewController.swift in Sources */,
+				695696921E2A618E0009607B /* DescriptionViewController.swift in Sources */,
 				694ACFF91E29A7A100EBFA13 /* AppDelegate.swift in Sources */,
 				694AD0271E29D99100EBFA13 /* ListOfCityTableViewController.swift in Sources */,
 			);
@@ -507,6 +511,7 @@
 				694AD01F1E29A7A100EBFA13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		694AD0201E29A7A100EBFA13 /* Build configuration list for PBXNativeTarget "ClimaCidadesTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				694AD0221E29A7A100EBFA13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		694AD0231E29A7A100EBFA13 /* Build configuration list for PBXNativeTarget "ClimaCidadesUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				694AD0251E29A7A100EBFA13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,22 @@ import UIKit
 
 class ListOfCityTableViewController: UITableViewController {
 
+    var listOfCity:NSArray = NSArray()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let userDefaults:UserDefaults = UserDefaults.standard
+        let itemList:NSArray? = userDefaults.object(forKey: "itemList") as? NSArray
+        
+        if ((itemList) != nil){
+            listOfCity = itemList!
+        }
+        
+        self.tableView.reloadData()
+        
+        let indexPath = IndexPath(row: 10, section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,24 +44,22 @@ class ListOfCityTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return listOfCity.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
 
-        // Configure the cell...
-
+        let city:Dictionary<String, AnyObject> = listOfCity.object(at: indexPath.row) as! Dictionary<String, AnyObject>
+        
+        cell.textLabel?.text = city["name"] as? String
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +96,20 @@ class ListOfCityTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+       
+        if(segue.identifier == "showCityInfo"){
+            let selectedIndexPath:IndexPath = self.tableView.indexPathForSelectedRow!
+            let descriptionViewController:DescriptionViewController = segue.destination as! DescriptionViewController
+            descriptionViewController.cityInfo = listOfCity.object(at: selectedIndexPath.row) as! Dictionary<String,AnyObject>
+        }
+        
+        
     }
-    */
+    
 
 }
