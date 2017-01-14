@@ -9,11 +9,15 @@
 import UIKit
 import InLocoMediaAPI
 
+let kREACHABleYWITHWIFI = "ReachableWithWIFI"
+let kNOTREACHABLE = "NotReachable"
+let kREACHABLEWITHWWAN = "ReachableWithWWAN"
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -22,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options.developmentDevices = [UIDevice.current.identifierForVendor!.uuidString]
         options.adsKey = "1fe1ad3ca709159a5df890ae20d598ccf67ff96494d301c6613e81945248cc2d"
         InLocoMedia.initWith(options)
-        
-        
+
         return true
     }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

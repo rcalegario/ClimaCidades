@@ -22,7 +22,7 @@ class ListOfCityTableViewController: UITableViewController {
         
         self.tableView.reloadData()
         
-        let indexPath = IndexPath(row: 10, section: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
     }
     

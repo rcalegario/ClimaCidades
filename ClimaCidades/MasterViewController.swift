@@ -9,17 +9,32 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class MasterViewController: UIViewController {
 
     var coordinates = CLLocationCoordinate2D()
     var listOfCity = [] as NSArray
+    var internetReach: Reachability?
     
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        //check if there is internet conection
+        internetReach = Reachability.forInternetConnection()
+        internetReach?.startNotifier()
+        if internetReach != nil {
+            let networkStatus: NetworkStatus = internetReach!.currentReachabilityStatus()
+            if(networkStatus.rawValue == 0){
+                //if does't have internet conection, a messenger appear for the user    
+                let alert = UIAlertController(title: "Sem Conexão", message: "Você esta sem internet", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
+                    print("ok")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,22 +60,27 @@ class ViewController: UIViewController {
 
     @IBAction func search(_ sender: UIButton) {
         
-        let lat = coordinates.latitude
-        let lon = coordinates.longitude
+        //URL to call for weather info for 15 cities next to the coordenates
+        let urlWeather = "http://api.openweathermap.org/data/2.5/find?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&cnt=15&APPID=b7448e21c0c1f2d706694d1dac66bea4"
         
-        let urlWeather = "http://api.openweathermap.org/data/2.5/find?lat=\(lat)&lon=\(lon)&cnt=15&APPID=b7448e21c0c1f2d706694d1dac66bea4"
-        print(urlWeather)
+        //use to debug
+        //print(urlWeather)
         
+        //send request and recive data
         let url = URL(string: urlWeather)
         let data = NSData(contentsOf: url!)
-        //print(data?.length)
+
         do{
+
             let json = try JSONSerialization.jsonObject(with: data! as Data, options: []) as! [String:Any]
             
+            //get the util info on the data
             let array = json["list"] as! NSArray
             
+            //removing info from previous cities
             listOfCity = [] as NSArray
             
+            //creating list with necessary information
             for temp in array {
                 let city = temp as! Dictionary<String, AnyObject>
                 let description = (city["weather"] as! NSArray)[0] as! Dictionary<String, AnyObject>
@@ -74,14 +94,12 @@ class ViewController: UIViewController {
             print("erro")
         }
         
-        let userDefaults:UserDefaults = UserDefaults.standard
-        //var itemList:NSMutableArray? = userDefaults.object(forKey: "itemList") as? NSMutableArray
         
+        let userDefaults:UserDefaults = UserDefaults.standard
         userDefaults.removeObject(forKey: "itemList")
         userDefaults.set(listOfCity, forKey: "itemList")
         userDefaults.synchronize()
-        
-        //print(listOfCity)
+
         print("ok")
         
     }
