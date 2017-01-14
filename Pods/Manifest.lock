@@ -1,0 +1,12 @@
+PODS:
+  - InLocoMedia-Ads-SDK (2.3.5)
+
+DEPENDENCIES:
+  - InLocoMedia-Ads-SDK (~> 2.3.5)
+
+SPEC CHECKSUMS:
+  InLocoMedia-Ads-SDK: c0cc92b9e9172df4853a70e53b9c401ca3ab1b94
+
+PODFILE CHECKSUM: 1186a95f2fdc1380dcb69b8d1849a9507b6ddcc8
+
+COCOAPODS: 1.1.1

@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		441F85E1B2C201E5D84F5F4476A8D50F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		612B318C16F915C14DB132659C007C1F /* Pods-ClimaCidades-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C55F55738E8C29011AFFB9D3C87A9 /* Pods-ClimaCidades-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0215C3236C7099EC49CD0236A826C8F3 /* Pods-ClimaCidades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClimaCidades.release.xcconfig"; sourceTree = "<group>"; };
+		166C55F55738E8C29011AFFB9D3C87A9 /* Pods-ClimaCidades-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClimaCidades-dummy.m"; sourceTree = "<group>"; };
+		5600137A4F2D1CAE80791F2AEC66DA72 /* Pods-ClimaCidades-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClimaCidades-resources.sh"; sourceTree = "<group>"; };
+		5A52CDDD9AE4C1C92F643E4314EBB791 /* Pods-ClimaCidades.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClimaCidades.debug.xcconfig"; sourceTree = "<group>"; };
+		7FD7A9AA8D991F17BED96FBEA85FFC29 /* Pods-ClimaCidades-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClimaCidades-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A617C3B5CCEF5BB9F69FA5E62AD78B4 /* Pods-ClimaCidades-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClimaCidades-frameworks.sh"; sourceTree = "<group>"; };
+		A7B0539545B1AFC1414619D6DBB677DB /* Pods-ClimaCidades-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClimaCidades-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D49A1EC63DD87396A72CC7F6ED906E6B /* libPods-ClimaCidades.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ClimaCidades.a"; path = "libPods-ClimaCidades.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36788351B15A4A132909271B4287A2A /* InLocoMediaAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InLocoMediaAPI.framework; path = InLocoMediaSDK/InLocoMediaAPI.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9E42706B7B0A328557C6E0D813CFDF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				441F85E1B2C201E5D84F5F4476A8D50F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15AC8AE9C98A7CB3FAAD5C039EA56FD9 /* Pods-ClimaCidades */ = {
+			isa = PBXGroup;
+			children = (
+				7FD7A9AA8D991F17BED96FBEA85FFC29 /* Pods-ClimaCidades-acknowledgements.markdown */,
+				A7B0539545B1AFC1414619D6DBB677DB /* Pods-ClimaCidades-acknowledgements.plist */,
+				166C55F55738E8C29011AFFB9D3C87A9 /* Pods-ClimaCidades-dummy.m */,
+				9A617C3B5CCEF5BB9F69FA5E62AD78B4 /* Pods-ClimaCidades-frameworks.sh */,
+				5600137A4F2D1CAE80791F2AEC66DA72 /* Pods-ClimaCidades-resources.sh */,
+				5A52CDDD9AE4C1C92F643E4314EBB791 /* Pods-ClimaCidades.debug.xcconfig */,
+				0215C3236C7099EC49CD0236A826C8F3 /* Pods-ClimaCidades.release.xcconfig */,
+			);
+			name = "Pods-ClimaCidades";
+			path = "Target Support Files/Pods-ClimaCidades";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7CA95C859600809471BAB970A7C4275C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				15AC8AE9C98A7CB3FAAD5C039EA56FD9 /* Pods-ClimaCidades */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C91F408573E3FF31C68CB3F0212959BE /* Pods */,
+				8A6E24CBC45BFFDC58BE306BFDB57E92 /* Products */,
+				7CA95C859600809471BAB970A7C4275C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8A6E24CBC45BFFDC58BE306BFDB57E92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D49A1EC63DD87396A72CC7F6ED906E6B /* libPods-ClimaCidades.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C89680DF1E349CD7ACEF5E7DEEFB5EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F36788351B15A4A132909271B4287A2A /* InLocoMediaAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C91F408573E3FF31C68CB3F0212959BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D15D47459CAABFC3181939351F12D3BD /* InLocoMedia-Ads-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D15D47459CAABFC3181939351F12D3BD /* InLocoMedia-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				C89680DF1E349CD7ACEF5E7DEEFB5EB3 /* Frameworks */,
+			);
+			name = "InLocoMedia-Ads-SDK";
+			path = "InLocoMedia-Ads-SDK";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F48541D7F9F064EBD46B28E57271D6A /* Pods-ClimaCidades */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A53B93CB5E0F787BB48878E7004553 /* Build configuration list for PBXNativeTarget "Pods-ClimaCidades" */;
+			buildPhases = (
+				58C3A053D3A600C590104F4DE2563CC5 /* Sources */,
+				D9E42706B7B0A328557C6E0D813CFDF2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ClimaCidades";
+			productName = "Pods-ClimaCidades";
+			productReference = D49A1EC63DD87396A72CC7F6ED906E6B /* libPods-ClimaCidades.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8A6E24CBC45BFFDC58BE306BFDB57E92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F48541D7F9F064EBD46B28E57271D6A /* Pods-ClimaCidades */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58C3A053D3A600C590104F4DE2563CC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				612B318C16F915C14DB132659C007C1F /* Pods-ClimaCidades-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE8E8EA2E85CE20933093BFA9BF5C3B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A52CDDD9AE4C1C92F643E4314EBB791 /* Pods-ClimaCidades.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F4DA38DBDE39479A84B938A5CA47578C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0215C3236C7099EC49CD0236A826C8F3 /* Pods-ClimaCidades.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A53B93CB5E0F787BB48878E7004553 /* Build configuration list for PBXNativeTarget "Pods-ClimaCidades" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE8E8EA2E85CE20933093BFA9BF5C3B8 /* Debug */,
+				F4DA38DBDE39479A84B938A5CA47578C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

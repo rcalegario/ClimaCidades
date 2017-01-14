@@ -16,6 +16,7 @@
 		694AD0191E29A7A100EBFA13 /* ClimaCidadesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD0181E29A7A100EBFA13 /* ClimaCidadesUITests.swift */; };
 		694AD0271E29D99100EBFA13 /* ListOfCityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694AD0261E29D99100EBFA13 /* ListOfCityTableViewController.swift */; };
 		695696921E2A618E0009607B /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695696911E2A618E0009607B /* DescriptionViewController.swift */; };
+		DE932A26DD53F63DE31FC63D /* libPods-ClimaCidades.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1A9830DDCEFF7CD493C3CD /* libPods-ClimaCidades.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4AF896EE91F9849ABC453A3B /* Pods-ClimaCidades.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaCidades.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaCidades/Pods-ClimaCidades.release.xcconfig"; sourceTree = "<group>"; };
 		694ACFF51E29A7A100EBFA13 /* ClimaCidades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimaCidades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694ACFF81E29A7A100EBFA13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		694ACFFA1E29A7A100EBFA13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		694AD01A1E29A7A100EBFA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694AD0261E29D99100EBFA13 /* ListOfCityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfCityTableViewController.swift; sourceTree = "<group>"; };
 		695696911E2A618E0009607B /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		753FA7C9A52C5FAA9DCA20BC /* Pods-ClimaCidades.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimaCidades.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClimaCidades/Pods-ClimaCidades.debug.xcconfig"; sourceTree = "<group>"; };
+		BE1A9830DDCEFF7CD493C3CD /* libPods-ClimaCidades.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClimaCidades.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE932A26DD53F63DE31FC63D /* libPods-ClimaCidades.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				694AD00C1E29A7A100EBFA13 /* ClimaCidadesTests */,
 				694AD0171E29A7A100EBFA13 /* ClimaCidadesUITests */,
 				694ACFF61E29A7A100EBFA13 /* Products */,
+				959F14EB9570EF737C420873 /* Pods */,
+				DCC42A95923A6EA2C2BC6B9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +138,23 @@
 			path = ClimaCidadesUITests;
 			sourceTree = "<group>";
 		};
+		959F14EB9570EF737C420873 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				753FA7C9A52C5FAA9DCA20BC /* Pods-ClimaCidades.debug.xcconfig */,
+				4AF896EE91F9849ABC453A3B /* Pods-ClimaCidades.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DCC42A95923A6EA2C2BC6B9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE1A9830DDCEFF7CD493C3CD /* libPods-ClimaCidades.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 694AD01D1E29A7A100EBFA13 /* Build configuration list for PBXNativeTarget "ClimaCidades" */;
 			buildPhases = (
+				50C42220CEA010C55EE97DDF /* [CP] Check Pods Manifest.lock */,
 				694ACFF11E29A7A100EBFA13 /* Sources */,
 				694ACFF21E29A7A100EBFA13 /* Frameworks */,
 				694ACFF31E29A7A100EBFA13 /* Resources */,
+				91DE37CE9488062EBF8F080D /* [CP] Embed Pods Frameworks */,
+				78BDA2CBFFA603C27461FEAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +286,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50C42220CEA010C55EE97DDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78BDA2CBFFA603C27461FEAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClimaCidades/Pods-ClimaCidades-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91DE37CE9488062EBF8F080D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClimaCidades/Pods-ClimaCidades-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		694ACFF11E29A7A100EBFA13 /* Sources */ = {
@@ -416,6 +491,7 @@
 		};
 		694AD01E1E29A7A100EBFA13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 753FA7C9A52C5FAA9DCA20BC /* Pods-ClimaCidades.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClimaCidades/Info.plist;
@@ -428,6 +504,7 @@
 		};
 		694AD01F1E29A7A100EBFA13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF896EE91F9849ABC453A3B /* Pods-ClimaCidades.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClimaCidades/Info.plist;
