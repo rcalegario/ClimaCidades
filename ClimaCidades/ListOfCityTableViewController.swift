@@ -24,6 +24,7 @@ class ListOfCityTableViewController: UITableViewController {
         
         let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.middle, animated: true)
+        print(Timer.debugDescription())
     }
     
     override func viewDidLoad() {
@@ -53,7 +54,7 @@ class ListOfCityTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-
+        
         let city:Dictionary<String, AnyObject> = listOfCity.object(at: indexPath.row) as! Dictionary<String, AnyObject>
         
         cell.textLabel?.text = city["name"] as? String
