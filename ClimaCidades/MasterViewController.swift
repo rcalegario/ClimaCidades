@@ -37,7 +37,6 @@ class MasterViewController: UIViewController {
         internetReach?.startNotifier()
         if internetReach != nil {
             let networkStatus: NetworkStatus = internetReach!.currentReachabilityStatus()
-            print(networkStatus.rawValue)
             if(networkStatus.rawValue == 0){
                 connection = false
             }
@@ -84,10 +83,10 @@ class MasterViewController: UIViewController {
         let urlWeather = "http://api.openweathermap.org/data/2.5/find?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&cnt=15&APPID=b7448e21c0c1f2d706694d1dac66bea4"
         
         //send request and recive data
-        print(Timer.debugDescription())
+        print(NSDate.debugDescription())
         let url = URL(string: urlWeather)
         let data = NSData(contentsOf: url!)
-        print(Timer.debugDescription())
+        print(NSDate.debugDescription())
         do{
                 
             let json = try JSONSerialization.jsonObject(with: data! as Data, options: []) as! [String:Any]
@@ -114,8 +113,6 @@ class MasterViewController: UIViewController {
         userDefaults.removeObject(forKey: "itemList")
         userDefaults.set(listOfCity, forKey: "itemList")
         userDefaults.synchronize()
-            
-        print("ok")
      
     }
     
