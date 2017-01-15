@@ -64,6 +64,10 @@ class MasterViewController: UIViewController {
         
         coordinates = self.mapView.convert(location, toCoordinateFrom: self.mapView)
         
+        let span = MKCoordinateSpanMake(3, 3)
+        let region = MKCoordinateRegion(center: coordinates, span: span)
+        self.mapView.setRegion(region, animated: true)
+        
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinates
         annotation.title = "ponto escolhido"
