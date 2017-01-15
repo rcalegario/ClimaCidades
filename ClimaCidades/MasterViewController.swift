@@ -24,7 +24,6 @@ class MasterViewController: UIViewController {
         if(!self.internetConnection()){
             //if does't have internet conection, a messenger appear for the user
             self.alertButton()
-            seachButton.isEnabled = false
         }
         
 
@@ -82,36 +81,36 @@ class MasterViewController: UIViewController {
         
         //removing info from previous cities
         listOfCity = [] as NSArray
-        
-        //URL to call for weather info for 15 cities next to the coordenates
-        let urlWeather = "http://api.openweathermap.org/data/2.5/find?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&cnt=15&APPID=b7448e21c0c1f2d706694d1dac66bea4"
-        
-        //send request and recive data
-        print(NSDate.debugDescription())
-        let url = URL(string: urlWeather)
-        let data = NSData(contentsOf: url!)
-        print(NSDate.debugDescription())
-        do{
+        if(self.internetConnection()){
+            //URL to call for weather info for 15 cities next to the coordenates
+            let urlWeather = "http://api.openweathermap.org/data/2.5/find?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&cnt=15&APPID=b7448e21c0c1f2d706694d1dac66bea4"
+            
+            //send request and recive data
+            print(NSDate.debugDescription())
+            let url = URL(string: urlWeather)
+            let data = NSData(contentsOf: url!)
+            print(NSDate.debugDescription())
+            do{
                 
-            let json = try JSONSerialization.jsonObject(with: data! as Data, options: []) as! [String:Any]
+                let json = try JSONSerialization.jsonObject(with: data! as Data, options: []) as! [String:Any]
                 
-            //get the util info on the data
-            let array = json["list"] as! NSArray
+                //get the util info on the data
+                let array = json["list"] as! NSArray
                 
-            //creating list with necessary information
-            for temp in array {
-                let city = temp as! Dictionary<String, AnyObject>
-                let description = (city["weather"] as! NSArray)[0] as! Dictionary<String, AnyObject>
-                listOfCity = listOfCity.adding(["name": city["name"] as! String,
-                                                "temp_min": city["main"]?["temp_min"] as! Double,
-                                                "temp_max": city["main"]?["temp_max"] as! Double,
-                                                "description": description["description"] as! String]
-                ) as NSArray
+                //creating list with necessary information
+                for temp in array {
+                    let city = temp as! Dictionary<String, AnyObject>
+                    let description = (city["weather"] as! NSArray)[0] as! Dictionary<String, AnyObject>
+                    listOfCity = listOfCity.adding(["name": city["name"] as! String,
+                                                    "temp_min": city["main"]?["temp_min"] as! Double,
+                                                    "temp_max": city["main"]?["temp_max"] as! Double,
+                                                    "description": description["description"] as! String]
+                        ) as NSArray
+                }
+            } catch {
+                print("erro")
             }
-        } catch {
-            print("erro")
         }
-        
         //preper infomation to the other view
         let userDefaults:UserDefaults = UserDefaults.standard
         userDefaults.removeObject(forKey: "itemList")

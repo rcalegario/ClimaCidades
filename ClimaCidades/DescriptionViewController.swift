@@ -35,8 +35,8 @@ class DescriptionViewController: UIViewController, ILMInterstitialAdDelegate{
         
         cityName_tf.text = cityInfo["name"] as? String
         description_tf.text = cityInfo["description"] as? String
-        minTemp_tf.text = "\(tmn)"
-        maxTemp_tf.text = "\(tmx)"
+        minTemp_tf.text = "\(String(format: "%.2f", tmn)) °C"
+        maxTemp_tf.text = "\(String(format: "%.2f", tmx)) °C"
         
     }
 
